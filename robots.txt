@@ -1,0 +1,24 @@
+# Robots.txt for sebastiangerhardt.com
+# Allow all crawlers access to the site
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Specific crawler instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block sensitive directories
+User-agent: *
+Disallow: /assets/originals/
+Disallow: /.claude/
+Disallow: /.git/
+
+# Sitemap location (to be created)
+Sitemap: https://sebastiangerhardt.com/sitemap.xml

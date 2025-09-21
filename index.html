@@ -3,16 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Gerhardt - Master of Illusion</title>
-    <meta name="description" content="Professional magician Sebastian Gerhardt creates unforgettable moments that bend reality. Book your magical experience today.">
+    <title>Sebastian Gerhardt - Master of Illusion | Professional Magician in Central Florida</title>
+    <meta name="description" content="Award-winning magician Sebastian Gerhardt performs mind-bending close-up magic and grand illusions for weddings, corporate events, and private parties. Available nationwide. Book now: (470) 202-8961">
 
-    <!-- Google Analytics (Replace GA_MEASUREMENT_ID with your actual ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sebastian Gerhardt - Master of Illusion">
+    <meta property="og:description" content="Experience mind-bending magic that transforms moments into memories. Award-winning magician for weddings, corporate events, and private parties.">
+    <meta property="og:image" content="https://sebastiangerhardt.com/assets/CardSpring%20Final.jpg">
+    <meta property="og:url" content="https://sebastiangerhardt.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sebastian Gerhardt Magic">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Orlando_Oracle">
+    <meta name="twitter:creator" content="@Orlando_Oracle">
+    <meta name="twitter:title" content="Sebastian Gerhardt - Master of Illusion">
+    <meta name="twitter:description" content="Award-winning magician creating unforgettable moments. Book now for your next event.">
+    <meta name="twitter:image" content="https://sebastiangerhardt.com/assets/CardSpring%20Final.jpg">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="Sebastian Gerhardt">
+    <meta name="keywords" content="magician, central florida magician, orlando magician, wedding magician, corporate magician, close-up magic, illusions, sebastian gerhardt">
+    <link rel="canonical" href="https://sebastiangerhardt.com">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7362ENH6T2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+        gtag('config', 'G-7362ENH6T2', {
+            'send_page_view': true,
+            'anonymize_ip': true
+        });
+
+        // Enhanced form tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track contact form submissions
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function() {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'engagement',
+                        'event_label': 'contact_form'
+                    });
+                });
+            }
+
+            // Track newsletter signups
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function() {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'engagement',
+                        'event_label': 'newsletter_signup'
+                    });
+                });
+            }
+
+            // Track CTA button clicks
+            document.querySelectorAll('a.btn-primary').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    gtag('event', 'click', {
+                        'event_category': 'cta',
+                        'event_label': btn.textContent
+                    });
+                });
+            });
+        });
     </script>
 
     <!-- Facebook Pixel (Replace YOUR_PIXEL_ID with your actual ID) -->
@@ -33,13 +95,109 @@
         src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
     </noscript>
 
-    <!-- Google Fonts -->
+    <!-- Performance: Preload critical resources -->
+    <link rel="preload" as="image" href="assets/CardSpring Final.webp" type="image/webp">
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2" crossorigin>
+
+    <!-- Google Fonts with display=swap for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://sebastiangerhardt.com",
+        "name": "Sebastian Gerhardt Magic",
+        "description": "Professional magician specializing in close-up magic, grand illusions, and entertainment for weddings, corporate events, and private parties",
+        "url": "https://sebastiangerhardt.com",
+        "telephone": "+14702028961",
+        "email": "info@orlandooracle.com",
+        "image": "https://sebastiangerhardt.com/assets/CardSpring%20Final.jpg",
+        "priceRange": "$$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "FL",
+            "addressLocality": "Central Florida",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.5383",
+            "longitude": "-81.3792"
+        },
+        "areaServed": [
+            {
+                "@type": "Country",
+                "name": "United States"
+            }
+        ],
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "performer": {
+            "@type": "Person",
+            "name": "Sebastian Gerhardt",
+            "jobTitle": "Master Magician",
+            "description": "Award-winning member of the International Brotherhood of Magicians",
+            "image": "https://sebastiangerhardt.com/assets/CardSpring%20Final.jpg",
+            "sameAs": [
+                "https://www.instagram.com/sebastian.gerhardt/",
+                "https://www.facebook.com/sebastianthemagician",
+                "https://x.com/Orlando_Oracle",
+                "https://www.threads.com/@sebastian.gerhardt",
+                "https://medium.com/@sebastiangerhardt"
+            ]
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Magic Performance Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "Interactive Close-Up Magic",
+                    "description": "Intimate sleight-of-hand miracles performed inches from your guests"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "The Group Show",
+                    "description": "Full stage performances with grand illusions"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Corporate Entertainment",
+                    "description": "Professional magic for team building and corporate events"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Wedding Magic",
+                    "description": "Romantic magical experiences for your special day"
+                }
+            ]
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Rachel Simmons"
+            },
+            "reviewBody": "Sebastian's magic isn't just entertaining — it's transformative. Our guests are still talking about that night."
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -200,61 +358,61 @@
             <div class="media-ribbon-track">
                 <div class="media-ribbon-logos">
                     <a href="#" class="media-logo-link" data-caption="FOX 35 Orlando Television Appearance">
-                        <img src="assets/fox35.png" alt="FOX 35 Logo" class="ribbon-logo">
+                        <img src="assets/fox35.png" alt="FOX 35 Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="KETK NBC East Texas Television Appearance">
-                        <img src="assets/ketk.png" alt="KETK Logo" class="ribbon-logo">
+                        <img src="assets/ketk.png" alt="KETK Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="MagicSeen Magazine Feature">
-                        <img src="assets/magicseen.png" alt="MagicSeen Logo" class="ribbon-logo">
+                        <img src="assets/magicseen.png" alt="MagicSeen Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="MAGIC Magazine Feature">
-                        <img src="assets/magic_magazine.png" alt="MAGIC Magazine Logo" class="ribbon-logo">
+                        <img src="assets/magic_magazine.png" alt="MAGIC Magazine Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="Penguin Magic Monthly Magazine Cover">
-                        <img src="assets/penguin_monthly.png" alt="Penguin Monthly Logo" class="ribbon-logo">
+                        <img src="assets/penguin_monthly.png" alt="Penguin Monthly Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="SunTrust Corporate Event Performance">
-                        <img src="assets/suntrust.png" alt="SunTrust Logo" class="ribbon-logo">
+                        <img src="assets/suntrust.png" alt="SunTrust Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="Lockheed Martin Corporate Event Performance">
-                        <img src="assets/lockheed_martin.png" alt="Lockheed Martin Logo" class="ribbon-logo">
+                        <img src="assets/lockheed_martin.png" alt="Lockheed Martin Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="LG Corporate Event Performance">
-                        <img src="assets/lg.png" alt="LG Logo" class="ribbon-logo">
+                        <img src="assets/lg.png" alt="LG Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="Lytx Corporate Event Performance">
-                        <img src="assets/lytx.png" alt="Lytx Logo" class="ribbon-logo">
+                        <img src="assets/lytx.png" alt="Lytx Logo" class="ribbon-logo" loading="lazy">
                     </a>
                 </div>
                 <!-- Duplicate set for seamless loop -->
                 <div class="media-ribbon-logos" aria-hidden="true">
                     <a href="#" class="media-logo-link" data-caption="FOX 35 Orlando Television Appearance">
-                        <img src="assets/fox35.png" alt="FOX 35 Logo" class="ribbon-logo">
+                        <img src="assets/fox35.png" alt="FOX 35 Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="KETK NBC East Texas Television Appearance">
-                        <img src="assets/ketk.png" alt="KETK Logo" class="ribbon-logo">
+                        <img src="assets/ketk.png" alt="KETK Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="MagicSeen Magazine Feature">
-                        <img src="assets/magicseen.png" alt="MagicSeen Logo" class="ribbon-logo">
+                        <img src="assets/magicseen.png" alt="MagicSeen Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="MAGIC Magazine Feature">
-                        <img src="assets/magic_magazine.png" alt="MAGIC Magazine Logo" class="ribbon-logo">
+                        <img src="assets/magic_magazine.png" alt="MAGIC Magazine Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="Penguin Magic Monthly Magazine Cover">
-                        <img src="assets/penguin_monthly.png" alt="Penguin Monthly Logo" class="ribbon-logo">
+                        <img src="assets/penguin_monthly.png" alt="Penguin Monthly Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="SunTrust Corporate Event Performance">
-                        <img src="assets/suntrust.png" alt="SunTrust Logo" class="ribbon-logo">
+                        <img src="assets/suntrust.png" alt="SunTrust Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="Lockheed Martin Corporate Event Performance">
-                        <img src="assets/lockheed_martin.png" alt="Lockheed Martin Logo" class="ribbon-logo">
+                        <img src="assets/lockheed_martin.png" alt="Lockheed Martin Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="LG Corporate Event Performance">
-                        <img src="assets/lg.png" alt="LG Logo" class="ribbon-logo">
+                        <img src="assets/lg.png" alt="LG Logo" class="ribbon-logo" loading="lazy">
                     </a>
                     <a href="#" class="media-logo-link" data-caption="Lytx Corporate Event Performance">
-                        <img src="assets/lytx.png" alt="Lytx Logo" class="ribbon-logo">
+                        <img src="assets/lytx.png" alt="Lytx Logo" class="ribbon-logo" loading="lazy">
                     </a>
                 </div>
             </div>
