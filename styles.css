@@ -686,6 +686,7 @@ p {
     transparent 70%
   );
   animation: fogPulse 8s ease-in-out infinite;
+  z-index: 2;
 }
 
 @keyframes fogPulse {
@@ -700,6 +701,8 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .ring {
@@ -778,6 +781,8 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 4;
+  pointer-events: none;
 }
 
 .sparkle {
@@ -844,6 +849,23 @@ p {
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.4) contrast(1.1);
 }
 
 .floating-element {
