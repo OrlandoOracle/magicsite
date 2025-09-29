@@ -1,0 +1,13 @@
+# Video testimonial files needed in this directory:
+
+1. testimonial-1.mp4 (1280x720px, H.264, AAC audio)
+   Client: Sarah & Michael Johnson - Wedding Clients
+
+2. testimonial-2.mp4 (1280x720px, H.264, AAC audio)
+   Client: Jennifer Martinez - Event Coordinator, Tech Corp
+
+3. testimonial-3.mp4 (1280x720px, H.264, AAC audio)
+   Client: David Chen - Private Party Host
+
+These files are referenced in index.html but do not exist yet.
+Please record client testimonials and place video files here.
