@@ -1159,6 +1159,45 @@ p {
   height: 100%;
 }
 
+.video-placeholder {
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.video-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  transition: all var(--transition-normal);
+  padding-left: 8px; /* Offset play icon to center visually */
+}
+
+.play-button:hover {
+  background: rgba(65, 105, 225, 0.9);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-glow);
+}
+
 .media-carousel {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

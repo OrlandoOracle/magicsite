@@ -1047,4 +1047,21 @@ window.shareOnSocial = function(platform, url = window.location.href, text = doc
     if (shareUrls[platform]) {
         window.open(shareUrls[platform], '_blank', 'width=600,height=400');
     }
+}
+
+/* ===== LAZY LOAD VIDEOS ON CLICK ===== */
+// Click-to-load system for Vimeo videos to improve page load performance
+document.querySelectorAll('.video-placeholder').forEach(placeholder => {
+    placeholder.addEventListener('click', function() {
+        const iframe = document.createElement('iframe');
+        iframe.src = this.dataset.src;
+        iframe.width = '640';
+        iframe.height = '360';
+        iframe.frameBorder = '0';
+        iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.title = this.dataset.title || 'Video';
+        this.replaceWith(iframe);
+    });
+});
 };
