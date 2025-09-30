@@ -1053,15 +1053,22 @@ window.shareOnSocial = function(platform, url = window.location.href, text = doc
 // Click-to-load system for Vimeo videos to improve page load performance
 document.querySelectorAll('.video-placeholder').forEach(placeholder => {
     placeholder.addEventListener('click', function() {
+        const videoId = this.dataset.videoId;
+        const provider = this.dataset.provider;
+
         const iframe = document.createElement('iframe');
-        iframe.src = this.dataset.src;
+        if (provider === 'vimeo') {
+            iframe.src = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+        }
         iframe.width = '640';
         iframe.height = '360';
         iframe.frameBorder = '0';
         iframe.allow = 'autoplay; fullscreen; picture-in-picture';
         iframe.allowFullscreen = true;
-        iframe.title = this.dataset.title || 'Video';
-        this.replaceWith(iframe);
+        iframe.title = this.querySelector('img')?.alt || 'Video';
+
+        this.parentElement.innerHTML = '';
+        this.parentElement.appendChild(iframe);
     });
 });
 };
