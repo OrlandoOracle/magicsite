@@ -2634,6 +2634,40 @@ textarea:focus {
   font-weight: 500;
 }
 
+/* Social button styles for icon-only links */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  color: var(--color-royal-blue);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 12px;
+}
+
+.social-btn:visited,
+.social-btn:active {
+  color: var(--color-royal-blue);
+}
+
+.social-btn:hover {
+  background: var(--color-royal-blue);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  border-color: var(--color-royal-blue);
+}
+
+.social-btn svg {
+  width: 36px;
+  height: 36px;
+  transition: all var(--transition-fast);
+}
+
 .newsletter-signup {
   max-width: 400px;
   margin: 0 auto;
