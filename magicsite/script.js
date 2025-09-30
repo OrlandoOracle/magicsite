@@ -614,28 +614,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     /* ===== NEWSLETTER SIGNUP ===== */
-    
+
+    // Newsletter form now handled by Netlify Forms
+    // JavaScript validation removed to allow natural form submission
+
+    /* COMMENTED OUT - Netlify Forms will handle newsletter submissions
     const newsletterForm = document.getElementById('newsletter-form');
-    
+
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+
             const emailInput = newsletterForm.querySelector('#newsletter-email');
             const submitBtn = newsletterForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            
+
             // Show loading state
             submitBtn.disabled = true;
             submitBtn.textContent = 'Subscribing...';
-            
+
             try {
                 // Simulate API call
                 await new Promise(resolve => setTimeout(resolve, 1500));
-                
+
                 showNotification('Thank you for subscribing! You\'ll receive updates about upcoming shows.', 'success');
                 emailInput.value = '';
-                
+
             } catch (error) {
                 showNotification('There was an error subscribing. Please try again.', 'error');
             } finally {
@@ -644,6 +648,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    */
     
     /* ===== ENHANCED VIDEO TESTIMONIAL CAROUSEL ===== */
     

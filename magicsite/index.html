@@ -453,7 +453,11 @@
                      5. Zapier/Make.com - No-code automation to email/CRM
 
                      Recommended: Change method to POST and update action URL -->
-                <form class="contact-form" id="contact-form" action="confirmation.html" method="GET">
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/confirmation.html" class="contact-form" id="contact-form">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div class="form-group">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
@@ -538,7 +542,8 @@
                     </div>
 
                     <div class="newsletter-signup">
-                    <form class="newsletter-form" id="newsletter-form">
+                    <form name="newsletter" method="POST" data-netlify="true" class="newsletter-form" id="newsletter-form">
+                        <input type="hidden" name="form-name" value="newsletter" />
                         <div class="newsletter-input-group">
                             <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email for exclusive updates" required aria-label="Email address for newsletter">
                             <button type="submit" class="btn btn-primary">Subscribe</button>
