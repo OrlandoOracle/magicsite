@@ -1131,6 +1131,34 @@ p {
   background: linear-gradient(135deg, var(--color-gray-dark) 0%, var(--color-black) 100%);
 }
 
+.tv-appearances {
+  margin: 3rem 0;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .media-carousel {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
