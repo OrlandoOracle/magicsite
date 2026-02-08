@@ -614,28 +614,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     /* ===== NEWSLETTER SIGNUP ===== */
-    
+
     const newsletterForm = document.getElementById('newsletter-form');
-    
+
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+
             const emailInput = newsletterForm.querySelector('#newsletter-email');
             const submitBtn = newsletterForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            
+
             // Show loading state
             submitBtn.disabled = true;
             submitBtn.textContent = 'Subscribing...';
-            
+
             try {
-                // Simulate API call
-                await new Promise(resolve => setTimeout(resolve, 1500));
-                
-                showNotification('Thank you for subscribing! You\'ll receive updates about upcoming shows.', 'success');
-                emailInput.value = '';
-                
+                const formData = new FormData(newsletterForm);
+                const response = await fetch(newsletterForm.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    showNotification('Thank you for subscribing! You\'ll receive updates about upcoming shows.', 'success');
+                    emailInput.value = '';
+                } else {
+                    throw new Error('Submission failed');
+                }
             } catch (error) {
                 showNotification('There was an error subscribing. Please try again.', 'error');
             } finally {
@@ -770,9 +776,9 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             top: 100px;
             right: 20px;
-            background: ${type === 'success' ? 'var(--color-success)' : 
-                        type === 'error' ? 'var(--color-error)' : 
-                        'var(--color-royal-blue)'};
+            background: ${type === 'success' ? 'var(--color-success)' :
+                        type === 'error' ? 'var(--color-error)' :
+                        'var(--color-primary, #D4A843)'};
             color: white;
             padding: var(--space-lg);
             border-radius: var(--radius-lg);
