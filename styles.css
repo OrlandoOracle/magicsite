@@ -656,7 +656,7 @@ p {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/Hero Image.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/Hero-Image.jpg');
   background-size: contain;
   background-position: right center;
   background-repeat: no-repeat;
