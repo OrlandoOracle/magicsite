@@ -352,29 +352,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    /* ===== SOCIAL MEDIA FLOAT ===== */
-    
-    const socialFloat = document.getElementById('social-float');
-    const socialToggle = socialFloat.querySelector('.social-toggle');
-    
-    socialToggle.addEventListener('click', () => {
-        socialFloat.classList.toggle('active');
+    /* ===== SOCIAL MEDIA FAB ===== */
+
+    const socialFab = document.getElementById('social-float');
+    const fabToggle = socialFab.querySelector('.social-fab-toggle');
+
+    fabToggle.addEventListener('click', () => {
+        socialFab.classList.toggle('active');
     });
-    
-    // Close social float when clicking outside
+
+    // Close FAB when clicking outside
     document.addEventListener('click', (e) => {
-        if (!socialFloat.contains(e.target)) {
-            socialFloat.classList.remove('active');
+        if (!socialFab.contains(e.target)) {
+            socialFab.classList.remove('active');
         }
     });
-    
+
+    // Close FAB on scroll
+    let fabScrollTimer;
+    window.addEventListener('scroll', () => {
+        if (socialFab.classList.contains('active')) {
+            clearTimeout(fabScrollTimer);
+            fabScrollTimer = setTimeout(() => {
+                socialFab.classList.remove('active');
+            }, 150);
+        }
+    });
+
     // Add click tracking for social links
-    const socialLinks = socialFloat.querySelectorAll('.social-link');
-    socialLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+    const fabLinks = socialFab.querySelectorAll('.social-fab-link');
+    fabLinks.forEach(link => {
+        link.addEventListener('click', () => {
             const platform = link.dataset.platform;
-            console.log(`Social link clicked: ${platform}`);
-            // Add analytics tracking here
+            if (typeof gtag === 'function') {
+                gtag('event', 'social_click', {
+                    'event_category': 'engagement',
+                    'event_label': platform
+                });
+            }
         });
     });
     
